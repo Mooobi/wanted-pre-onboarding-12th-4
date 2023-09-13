@@ -19,7 +19,7 @@ export class MockService implements mockService {
     }
 
     const data = await response.json();
-    console.info(data);
+
     return data;
   }
 }
