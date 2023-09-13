@@ -71,6 +71,7 @@ npm run dev
 - 특정 데이터 구역을 클릭 시에도 필터링 기능과 동일한 형태로 동일한 ID값을 가진 데이터 구역을 하이라이트해주세요
 
 ## 구현 화면
+![Sep-13-2023 16-40-07](https://github.com/Mooobi/wanted-pre-onboarding-12th-4/assets/124570875/4d9b6baf-ce31-4864-bb56-c762858990ff)
 
 ## 개발 과정
 
