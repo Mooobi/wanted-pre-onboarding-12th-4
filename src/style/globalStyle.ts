@@ -15,7 +15,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #cae9ff;
 }
 a {
   text-decoration: none;
