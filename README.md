@@ -81,7 +81,7 @@ npm run dev
 
 이 프로젝트에서는 mock data를 사용하지만 확장성을 고려하여 api 기능을 구현하였습니다. 현재 url로 mock data가 저장된 폴더의 경로를 사용하고 있으며, 추후 서버에서 데이터를 받아올 경우 url만 변경하여 사용할 수 있도록 구현했습니다.
 
-1차적으로 mockService에서 api로 promise 객체인 data를 받아오고 useGetGraph 훅으로 data를 정제 및 상태로 저장한 뒤 반환하도록 설계했습니다.
+1차적으로 mockService에서 api로 promise 객체인 data를 받아오고 useGetMockData 훅으로 data를 정제 및 상태로 저장한 뒤 반환하도록 설계했습니다.
 
 > mockService.ts (API 요청 클래스)
 
@@ -111,7 +111,7 @@ class MockService implements mockService {
 
 <br/>
 
-> useGetGraph.ts (받은 데이터 정제 및 상태로 저장 후 반환)
+> useGetMockData.ts (받은 데이터 정제 및 상태로 저장 후 반환)
 
 ```ts
 const useGetMockData = () => {
@@ -342,6 +342,8 @@ const FilteringButton = ({ onFilter, filteredId }: {
 #### 4. 특정 데이터 구역을 클릭 시에도 필터링 기능과 동일한 형태로 동일한 ID값을 가진 데이터 구역을 하이라이트해주세요
 
 `Bar` 컴포넌트에 onClick 이벤트를 할당하여 클릭 시 filtereId를 변경하도록 하였습니다. 이미 `filterId`에 따른 색 변경 로직이 있기 때문에 단순히 bar를 클릭하여 상태만 변경해줘도 기존 로직이 작동합니다.
+
+> Chart.tsx
 
 ```ts
 const handleBarClick = (entry: prcessedData) => {
